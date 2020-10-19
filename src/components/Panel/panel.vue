@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import { sendData } from '@/api/form'
 import ViewRecord from './components/viewRecord'
 
 export default {
@@ -22,7 +21,7 @@ export default {
     }
   },
   mounted(){
-    fetch('http://localhost:5000/get-record')
+    fetch('https://rocky-refuge-77020.herokuapp.com/get-record')
       .then(res => res.json())
       .then(json => this.records = json.data)
   }

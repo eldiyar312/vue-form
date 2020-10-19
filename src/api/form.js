@@ -8,7 +8,7 @@ export const sendData = async (
     body = JSON.stringify(body)
   }
 
-  const uri = 'http://localhost:5000'
+  const uri = 'https://rocky-refuge-77020.herokuapp.com'
 
   const option = {
     method,

@@ -28,34 +28,29 @@ export default {
   data(){
     return {
       firstName: 'eldiayr',
-      lastName: 'Barynbekov',
-      number: 703728103,
+      lastName: '',
+      number: null,
       error: ''
     }
   },
   methods: {
     onSubmit(){
-      if (this.firstName && this.number) {
-        this.error = ''
-        return
-      }
-
       if (!this.firstName) {
         this.error = 'incorrect First name!'
       }
-      if (!this.number) {
+      else if (!this.number) {
         this.error = 'incorrect Number tel!'
       }
-    },
-    async request(){
-      sendData(
-        '/form-data', 'POST', 
-        {
-          firstName: this.firstName, 
-          lastName: this.lastName, 
-          number: Number(this.number)
-        }
-      ).then(() => this.$router.push('panel'))
+      else {
+        sendData(
+          '/form-data', 'POST', 
+          {
+            firstName: this.firstName, 
+            lastName: this.lastName, 
+            number: Number(this.number)
+          }
+        ).then(() => this.$router.push('panel'))
+      }
     }
   }
 }

@@ -2,9 +2,11 @@
   "name": "vue-form",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://eldiyar312.github.io/vue-record/",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -15,6 +17,7 @@
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-router": "^4.5.7",
     "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0"
+    "@vue/compiler-sfc": "^3.0.0",
+    "gh-pages": "^3.1.0"
   }
 }
